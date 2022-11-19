@@ -1,6 +1,14 @@
 import React from 'react';
-import Card1 from './components/Card1';
-import Card2 from './components/Card2';
+import cardsArray from './cardData';
+import Card from './components/Card';
+
+
+const cards = cardsArray.map ((ele, index)=> {
+  return < Card {...ele}  key = {index}/>
+
+
+})
+
 
 export default function App() {
 
@@ -8,8 +16,8 @@ export default function App() {
     <div className="App">
       <h1>Bootstrap Cards To Component Example</h1>
       <section className="cards">
-        <Card1 />
-        <Card2/>
+{cards}
+      
       </section>
     </div>
   );

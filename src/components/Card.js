@@ -2,14 +2,15 @@ import React from "react";
 import CardBody from "./CardBody";
 import CardImage from "./CardImage";
 
- const Card1 = () => {
+ const Card = (props) => {
 
     return  (
         <div className="card" style={ {width: "18rem"} }>
-        <CardImage />
-        <CardBody title="Santorini"/>
+        <CardImage  img={props.img}/>
+        <CardBody 
+        {...props} />
       </div>
         )
  }
 
- export default Card1
+ export default Card

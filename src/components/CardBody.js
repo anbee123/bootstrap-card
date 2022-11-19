@@ -2,16 +2,17 @@ import React from 'react';
 import Button from './Button.js';
 
 const CardBody = (props) => {
-    return (
+  return (
     <div className="card-body">
-    <h5 className="card-title">Card Title</h5>
-    <p className="card-text">
-      Some quick example text to build on the card title and make up the
-      bulk of the card's content.
-    </p>
-    <Button />
+    <h5 className="card-title">{props.title}</h5>
+    <p className="card-text"> {props.text}</p>
+    <Button url={props.url}/>
   </div>
     )
 }
-
+//export the components
 export default CardBody;
+
+
+// EJS to insert JS we used <% JS here %>
+// In JSX to insert JS we use { JS here }
