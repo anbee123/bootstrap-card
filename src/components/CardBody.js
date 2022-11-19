@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button.js';
 
-const CardBody = () => {
+const CardBody = (props) => {
     return (
     <div className="card-body">
     <h5 className="card-title">Card Title</h5>
